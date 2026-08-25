@@ -1,4 +1,4 @@
-// Burger menu
+
 const burger = document.getElementById("burgerBtn");
 const navLinks = document.getElementById("navLinks");
 
