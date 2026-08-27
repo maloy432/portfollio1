@@ -73,7 +73,7 @@ $(document).ready(function () {
   let autoRotate = setInterval(function () {
     currdeg = currdeg - 60;
     rotateCarousel();
-  }, 4000);
+  }, 2000);
 
   // Остановка автопрокрутки при наведении
   $(".carousel-container").hover(
