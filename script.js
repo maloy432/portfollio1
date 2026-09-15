@@ -1,4 +1,3 @@
-
 const burger = document.getElementById("burgerBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -75,7 +74,6 @@ $(document).ready(function () {
     rotateCarousel();
   }, 2000);
 
-  // Остановка автопрокрутки при наведении
   $(".carousel-container").hover(
     function () {
       clearInterval(autoRotate);
