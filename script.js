@@ -44,7 +44,47 @@ window.addEventListener("resize", () => {
   }
 });
 
-// ===== 3D КАРУСЕЛЬ С КНОПКАМИ =====
+const familyCarousel = document.querySelector(".a3d");
+
+if (familyCarousel) {
+  const familyWrapper = document.querySelector(".family-carousel-wrapper");
+  let familyTimer;
+
+  const showNextFamilyMember = () => {
+    familyCarousel.append(familyCarousel.firstElementChild);
+  };
+
+  const showPreviousFamilyMember = () => {
+    familyCarousel.prepend(familyCarousel.lastElementChild);
+  };
+
+  const startFamilyAutoplay = () => {
+    window.clearInterval(familyTimer);
+    familyTimer = window.setInterval(showNextFamilyMember, 3500);
+  };
+
+  document.querySelector(".family-next").addEventListener("click", () => {
+    showNextFamilyMember();
+    startFamilyAutoplay();
+  });
+
+  document.querySelector(".family-prev").addEventListener("click", () => {
+    showPreviousFamilyMember();
+    startFamilyAutoplay();
+  });
+
+  familyWrapper.addEventListener("mouseenter", () =>
+    window.clearInterval(familyTimer),
+  );
+  familyWrapper.addEventListener("mouseleave", startFamilyAutoplay);
+  familyWrapper.addEventListener("focusin", () =>
+    window.clearInterval(familyTimer),
+  );
+  familyWrapper.addEventListener("focusout", startFamilyAutoplay);
+
+  startFamilyAutoplay();
+}
+
 $(document).ready(function () {
   var carousel = $(".carousel");
   var currdeg = 0;
@@ -68,7 +108,6 @@ $(document).ready(function () {
     });
   }
 
-  // Автопрокрутка
   let autoRotate = setInterval(function () {
     currdeg = currdeg - 60;
     rotateCarousel();
