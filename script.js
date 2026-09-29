@@ -88,14 +88,15 @@ if (familyCarousel) {
 $(document).ready(function () {
   var carousel = $(".carousel");
   var currdeg = 0;
+  var rotationStep = 360 / carousel.children().length;
 
   $(".next-btn").on("click", function () {
-    currdeg = currdeg - 60;
+    currdeg = currdeg - rotationStep;
     rotateCarousel();
   });
 
   $(".prev-btn").on("click", function () {
-    currdeg = currdeg + 60;
+    currdeg = currdeg + rotationStep;
     rotateCarousel();
   });
 
@@ -107,21 +108,4 @@ $(document).ready(function () {
       transform: "rotateY(" + currdeg + "deg)",
     });
   }
-
-  let autoRotate = setInterval(function () {
-    currdeg = currdeg - 60;
-    rotateCarousel();
-  }, 2000);
-
-  $(".carousel-container").hover(
-    function () {
-      clearInterval(autoRotate);
-    },
-    function () {
-      autoRotate = setInterval(function () {
-        currdeg = currdeg - 60;
-        rotateCarousel();
-      }, 4000);
-    },
-  );
 });

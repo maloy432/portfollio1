@@ -656,27 +656,47 @@ img {
 }
 
 .carousel .item:nth-child(1) {
-  transform: rotateY(0deg) translateZ(250px);
+  transform: rotateY(0deg) translateZ(360px);
 }
 
 .carousel .item:nth-child(2) {
-  transform: rotateY(60deg) translateZ(250px);
+  transform: rotateY(32.727deg) translateZ(360px);
 }
 
 .carousel .item:nth-child(3) {
-  transform: rotateY(120deg) translateZ(250px);
+  transform: rotateY(65.455deg) translateZ(360px);
 }
 
 .carousel .item:nth-child(4) {
-  transform: rotateY(180deg) translateZ(250px);
+  transform: rotateY(98.182deg) translateZ(360px);
 }
 
 .carousel .item:nth-child(5) {
-  transform: rotateY(240deg) translateZ(250px);
+  transform: rotateY(130.909deg) translateZ(360px);
 }
 
 .carousel .item:nth-child(6) {
-  transform: rotateY(300deg) translateZ(250px);
+  transform: rotateY(163.636deg) translateZ(360px);
+}
+
+.carousel .item:nth-child(7) {
+  transform: rotateY(196.364deg) translateZ(360px);
+}
+
+.carousel .item:nth-child(8) {
+  transform: rotateY(229.091deg) translateZ(360px);
+}
+
+.carousel .item:nth-child(9) {
+  transform: rotateY(261.818deg) translateZ(360px);
+}
+
+.carousel .item:nth-child(10) {
+  transform: rotateY(294.545deg) translateZ(360px);
+}
+
+.carousel .item:nth-child(11) {
+  transform: rotateY(327.273deg) translateZ(360px);
 }
 
 .carousel-controls {
