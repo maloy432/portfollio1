@@ -540,7 +540,7 @@ img {
 
 .family-card {
   --w: 17.5em;
-  --n: 6;
+  --n: 5;
   --i: 0;
 
   grid-area: 1 / 1;
@@ -553,7 +553,7 @@ img {
   overflow: hidden;
   border: 1px solid rgba(0, 255, 102, 0.35);
   box-shadow: 0 0 25px rgba(0, 255, 102, 0.1);
-  transform: rotateY(calc(var(--i) * 60deg)) translateZ(250px);
+  transform: rotateY(calc(var(--i) * 72deg)) translateZ(250px);
 }
 
 .family-card img {
@@ -561,6 +561,18 @@ img {
   height: 100%;
   object-fit: cover;
   filter: saturate(0.65) contrast(1.15);
+}
+
+.family-card-sticker {
+  position: absolute;
+  z-index: 2;
+  top: var(--sticker-y);
+  left: var(--sticker-x);
+  transform: translate(-50%, -50%);
+  font-size: 52px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+  pointer-events: none;
 }
 
 .family-card-info {
@@ -940,7 +952,7 @@ img {
   .family-card {
     --w: 12em;
     max-width: 200px;
-    transform: rotateY(calc(var(--i) * 60deg)) translateZ(180px);
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(180px);
   }
 
   .contact__bottom {
@@ -975,7 +987,11 @@ img {
   .family-card {
     --w: 9em;
     max-width: 150px;
-    transform: rotateY(calc(var(--i) * 60deg)) translateZ(135px);
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(135px);
+  }
+
+  .family-card-sticker {
+    font-size: 42px;
   }
 
   .family-card-info h3 {
@@ -1070,14 +1086,8 @@ img {
 }
 
 .family-card:nth-child(5) {
-  transform: translate(-50%, -50%) translateX(360px) scale(0.72) rotateY(-28deg) !important;
+  transform: translate(-50%, -50%) translateX(250px) scale(0.72) rotateY(-28deg) !important;
   z-index: 2 !important;
-}
-
-.family-card:nth-child(6) {
-  transform: translate(-50%, -50%) translateX(500px) scale(0.58) rotateY(-38deg) !important;
-  z-index: 1 !important;
-  opacity: 0.45 !important;
 }
 
 .family-carousel-controls {
@@ -1238,9 +1248,4 @@ img {
       rotateY(-22deg) !important;
   }
 
-  .family-card:nth-child(6) {
-    transform: translate(-50%, -50%) translateX(160px) scale(0.38)
-      rotateY(-28deg) !important;
-    opacity: 0.35 !important;
-  }
 }
